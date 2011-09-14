@@ -29,7 +29,7 @@ class URLParserUserBBCodeListener implements EventListener {
 				URLParser::$text = StringUtil::replace('[user]'.$match.'[/user]', $match, URLParser::$text);
 			}
 			else {
-				URLParser::$text = StringUtil::replace('[user]'.$match.'[/user]', '[url=index.php?page=User&amp;userID='.$user->userID.']'.$user->username.'[/url]', URLParser::$text);
+				URLParser::$text = StringUtil::replace('[user]'.$match.'[/user]', '[img]'.PAGE_URL.'/'.RELATIVE_WCF_DIR.'icon/userS.png[/img] [url='.PAGE_URL.'/index.php?page=User&userID='.$user->userID.']'.$user->username.'[/url]', URLParser::$text);
 			}
 		}
 	}
