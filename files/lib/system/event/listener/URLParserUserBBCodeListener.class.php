@@ -24,7 +24,13 @@ class URLParserUserBBCodeListener implements EventListener {
 
 		foreach ($matches[1] as $match) {
 			$user = new User(null, null, $match);
-			URLParser::$text = StringUtil::replace('[user]'.$match.'[/user]', '[url=index.php?page=User&amp;userID='.$user->userID.']'.$user->username.'[/url]', URLParser::$text);
+
+			if (!$user->userID) {
+				URLParser::$text = StringUtil::replace('[user]'.$match.'[/user]', $match, URLParser::$text);
+			}
+			else {
+				URLParser::$text = StringUtil::replace('[user]'.$match.'[/user]', '[url=index.php?page=User&amp;userID='.$user->userID.']'.$user->username.'[/url]', URLParser::$text);
+			}
 		}
 	}
 }
