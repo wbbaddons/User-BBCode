@@ -5,20 +5,36 @@
 		<packagename language="de"><![CDATA[BBCode "User"]]></packagename>
 		<packagename language="de-informal"><![CDATA[BBCode "User"]]></packagename>
 		<isunique>1</isunique>
-		<version>1.0.0</version>
-		<date>2011-06-07</date>
+		<version>1.1.0</version>
+		<date>2011-09-15</date>
 		<plugin>com.woltlab.wcf.data.message.bbcode</plugin>
 	</packageinformation>
+
 	<authorinformation>
 		<author><![CDATA[Tim Düsterhus]]></author>
 		<authorurl><![CDATA[http://www.wbbaddons.de]]></authorurl>
 	</authorinformation>
+
 	<requiredpackages>
 		<requiredpackage minversion="1.1.8">com.woltlab.wcf</requiredpackage>
 		<requiredpackage>com.woltlab.wcf.data.message.bbcode</requiredpackage>
 	</requiredpackages>
+
 	<instructions type="install">
 		<eventlistener>eventlistener.xml</eventlistener>
+		<bbcodes>bbcodes.xml</bbcodes>
 		<files>files.tar</files>
+		<languages languagecode="de-informal">de-informal.xml</languages>
+		<languages languagecode="de">de.xml</languages>
+		<languages languagecode="en">en.xml</languages>
+	</instructions>
+
+	<instructions type="update" fromversion="*">
+		<eventlistener>eventlistener.xml</eventlistener>
+		<bbcodes>bbcodes.xml</bbcodes>
+		<files>files.tar</files>
+		<languages languagecode="de-informal">de-informal.xml</languages>
+		<languages languagecode="de">de.xml</languages>
+		<languages languagecode="en">en.xml</languages>
 	</instructions>
 </package>

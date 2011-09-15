@@ -3,7 +3,7 @@
 require_once(WCF_DIR.'lib/system/event/EventListener.class.php');
 
 /**
- * Parses the [user]-BBCode into URL-Tags
+ * Adds the UserID for [user]-BBCode.
  *
  * @author	Tim Düsterhus
  * @copyright	2011 wbbaddons.de
@@ -29,7 +29,7 @@ class URLParserUserBBCodeListener implements EventListener {
 				URLParser::$text = StringUtil::replace('[user]'.$match.'[/user]', $match, URLParser::$text);
 			}
 			else {
-				URLParser::$text = StringUtil::replace('[user]'.$match.'[/user]', '[img]'.PAGE_URL.'/'.RELATIVE_WCF_DIR.'icon/userS.png[/img] [url='.PAGE_URL.'/index.php?page=User&userID='.$user->userID.']'.$user->username.'[/url]', URLParser::$text);
+				URLParser::$text = StringUtil::replace('[user]'.$match.'[/user]', '[user='.$user->userID.']'.$user->username.'[/user]', URLParser::$text);
 			}
 		}
 	}
