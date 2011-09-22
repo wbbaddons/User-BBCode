@@ -6,7 +6,7 @@ require_once(WCF_DIR.'lib/data/message/bbcode/BBCode.class.php');
 /**
  * Parses the [user]-BBCode.
  *
- * @author	Tim Düsterhus
+ * @author	Tim DÃ¼sterhus
  * @copyright	2011 wbbaddons.de
  * @license 	Creative Commons BY-ND <http://creativecommons.org/licenses/by-nd/3.0/de/>
  * @package 	de.wbbaddons.wcf.bbcode.user

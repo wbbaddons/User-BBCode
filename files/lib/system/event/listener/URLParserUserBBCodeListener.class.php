@@ -5,7 +5,7 @@ require_once(WCF_DIR.'lib/system/event/EventListener.class.php');
 /**
  * Adds the UserID for [user]-BBCode.
  *
- * @author	Tim Düsterhus
+ * @author	Tim DÃ¼sterhus
  * @copyright	2011 wbbaddons.de
  * @license 	Creative Commons BY-ND <http://creativecommons.org/licenses/by-nd/3.0/de/>
  * @package 	de.wbbaddons.wcf.bbcode.user
