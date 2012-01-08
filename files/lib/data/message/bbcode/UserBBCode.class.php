@@ -20,7 +20,7 @@ class UserBBCode implements BBCode {
 		$userID = intval(isset($openingTag['attributes'][0]) ? $openingTag['attributes'][0] : 0);
 
 		if ($userID == 0) {
-			$user = new User(null, null, $content);
+			$user = new User(null, null, StringUtil::decodeHTML($content));
 			$userID = $user->userID;
 			$content = $user->username;
 		}
